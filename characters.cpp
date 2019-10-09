@@ -1,6 +1,6 @@
 *
 * Personal Project 1
-* Tim Gray (White)
+* Tim Gray 
 * 10/09/2019
 *
     The Ultimate Cartoon Fanatic Showdown
