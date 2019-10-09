@@ -186,6 +186,7 @@ taken away from the user. If the user guesses "9" words correctly, they win a
 trophy. The trophy is then added to their attributes on the high score list. 
 
 Each trophy unlocks a new character for the user.
+
 ===============================================================================
 
 Controls/ Commands:
@@ -204,4 +205,4 @@ Controls/ Commands:
 
 "play" = Play now
 
-"hs" = View high score                     
+"hs" = View high score                    
