@@ -15,6 +15,4 @@
  
  Contributors:
           
-            Emily Tran
-            David Massart
-            Will Rusk
+            Tim White
