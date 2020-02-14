@@ -1,155 +1,230 @@
-  Networks: 6 (class for each)
-  -------------------
-  Characters: 87
-  Networks: 
-  -Cartoon Network
-  	Shows:
-  	-Adventure Time
-  		Characters:
-  		-Finn
-  		-Jake
-  		-Bubblegum
-  		-BMO
-  	-Chowder
-  		Characters:
-  		-Gazpacho
-  		-Shnitzel
-  		-Panini
-  		-Truffles
-  	-Foster's Home for Imaginary Friends
-  		Characters:
-  		-Frankie
-  		-Bloo
-  		-Eduardo
-  		-Wilt
-  	-Dexter's Laboratory
-  		Characters:
-  		-Deedee
-  		-Dexter
-  		-Mandark
+  Network
+Cartoon Network
+==============
+==============
+Show
+Adventure Time
+==============
+Characters
+Finn
+Jake
+Bubblegum
+BMO
+==============
+==============
+Show
+Chowder
+==============
+Characters
+Gazpacho
+Shnitzel
+Panini
+Truffles
+==============
+==============
+Show
+Foster's Home for Imaginary Friends
+==============
+Characters
+Frankie
+Bloo
+Eduardo
+Wilt
+==============
+==============
+Show
+Dexter's Laboratory
+==============	
+Characters
+Deedee
+Dexter
+Mandark
+Mom
 
-  -Boomerang
-  	Shows:
-  	-Garfield
-  		Characters:
-  		-Odie
-  		-Jon
-  		-Liz
-  		-Nermal
-  	-Scooby Doo
-  		Characters:
-  		-Shaggy
-  		-Fred
-  		-Velma
-  		-Daphne
-  	-The Flinstones
-  		Characters:
-  		-Bammbamm
-  		-Fred
-  		-Wilma
-  		-Barney
-  		-Betty
-  	-Looney Tunes
-  		Characters:
-  		-Bugs
-  		-Marvin
-  		-Lola
-  		-Taz
-  		-Tweety
-  		
-  -Adult Swim
-  	Shows:
-  	-Rick and Morty
-  		Characters:
-  		-Squanchy
-  		-Beth
-  		-Jerry
-  		-Summer
-  	-The Boondocks
-  		Characters:
-  		-Huey
-  		-Riley
-  		-Robert
-  		-Tom
-  		-Ruckus
-  	-Loiter Squad
-  		Characters:
-  		-Tyler
-  		-Jasper
-  		-Taco
-  		-Earl
+Network 
+Boomerang
+==============
+==============
+Show
+Garfield
+==============
+Characters
+Odie
+Jon
+Liz
+Nermal
+==============
+==============
+Show
+Scooby Doo
+==============
+Characters
+Shaggy
+Fred
+Velma
+Daphne
+==============
+==============
+Show
+The Flinstones
+==============
+Characters
+Bammbamm
+Fred
+Wilma
+Barney
+==============
+==============
+Show
+Looney Tunes
+==============	
+Characters
+Bugs
+Lola
+Taz
+Tweety
 
-  -PBS Kids
-  	Shows:
-  	-Arthur
-  		Characters:
-  		-Muffy
-  		-Buster
-  		-DW
-  	-Clifford
-  		Characters:
-  		-Emily
-  		-Tbone
-  		-Cleo
-  		-Mac
-  	-Bob the Builder
-  		Characters:
-  		-Roley
-  		-Scoop
-  		-Muck
-  		-Dizzy
+Network 
+Adult Swim
+==============
+==============
+Show
+Rick and Morty
+==============
+Characters
+Squanchy
+Beth
+Jerry
+Summer
+==============
+==============
+Show
+The Boondocks
+==============
+Characters
+Huey
+Riley
+Robert
+Ruckus
+==============
+==============
+Show
+Loiter Squad
+==============
+Tyler
+Jasper
+Taco
+Earl
 
-  -Nickelodean
-  	Shows:
-  	-Rugrats
-  		Characters:
-  		-Angelica
-  		-Chuckie
-  		-Tommy
-  		-Susie
-  	-iCarly
-  		Characters:
-  		-Spencer
-  		-Gibby
-  		-Sam
-  		-Freddie
-  	-Spongebob
-  		Characters:
-  		-Patrick
-  		-Squidward
-  		-MrKrabs
-  		-Sandy
-  	-Dora the Explorer
-  		Characters:
-  		-Swiper
-  		-Diego
-  		-Tico
-  		-Boots
-  		-Benny
+Network 
+PBS Kids
+==============
+==============
+Show
+Arthur
+==============
+Characters
+Muffy
+Buster
+DW
+Binky
+==============
+==============
+Show
+Clifford
+==============
+Characters
+Emily
+Tbone
+Cleo
+Mac
+==============
+==============
+Show
+Bob the Builder
+==============
+Roley
+Scoop
+Muck
+Dizzy
 
-  -Disney Channel
-  	Shows:
-  	-Phineas and Ferb
-  		Characters:
-  		-Candace
-  		-Perry
-  		-Doofenshmirtz
-  		-Isabella
-  	-That's so Raven
-  		Characters:
-  		-Raven
-  		-Chelsea
-  		-Eddie
-  		-Cory
-  	-The Proud Family
-  		Characeters:
-  		-Penny
-  		-SugaMama
-  		-Oscar
-  		-Dijonay
-  	-Jessie
-  		Characters:
-  		-Luke
-  		-Emma
-  		-Zuri
-  		-Ravi
+Network 
+Nickelodean
+==============
+==============
+Show
+Rugrats
+==============
+Characters
+Angelica
+Chuckie
+Tommy
+Susie
+==============
+==============
+Show
+iCarly
+==============
+Characters
+Spencer
+Gibby
+Sam
+Freddie
+==============
+==============
+Show
+Spongebob
+==============
+Patrick
+Squidward
+MrKrabs
+Sandy
+==============
+==============
+Show
+Dora the Explorer
+==============
+Swiper
+Diego
+Tico
+Boots
+
+Network 
+Disney Channel
+==============
+==============
+Show
+Phineas and Ferb
+==============
+Candace
+Perry
+Doofenshmirtz
+Isabella
+==============
+==============
+Show
+That's so Raven
+==============
+Characters
+Raven
+Chelsea
+Eddie
+Cory
+==============
+==============
+Show
+The Proud Family
+==============
+Penny
+SugaMama
+Oscar
+Dijonay
+==============
+==============
+Show
+Jessie
+==============
+Luke
+Emma
+Zuri
+Ravi
