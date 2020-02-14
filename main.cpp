@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <fstream>
-#include <ssstream>
+#include <sstream>
 using namespace std;
 
 //Constants
@@ -17,36 +17,40 @@ const string HINT = "hint";
 const string READ_GUIDE = "rg";
 const string PLAY_NOW = "play";
 const string HIGH_SCORE = "hs";
+const string HIGH_SCORE_LIST = "highscores.dat";
 
 //Struct for user's info
-struct user_info
+struct User_info
 {
     string name;
     int trophies;
     int game_score;
 };
 
+//Struct for characters user can choose
+
+
 //Function prototypes
 char to_lowercase(char curr);
 void read_command(string cmmnd);
-int read_file(string cmmnd, string user_name);
+void read_file(string cmmnd);
 void play_game();
-void check_username();
+struct User_info *check_username(string user_name);
 
-int main (){
-	string cmmnd, user_name = "";
+int main(){
+	string cmmnd;
 	//Get Command
 	cout << " Enter a command (rg, play, hs, q) ";
 	cin >> cmmnd;
 	for (char &curr : cmmnd){
-    curr = to_lowercase(curr);
-    }
-    if (cmmnd == QUIT){
-    	return 0;
-    } else {
-    	read_command(cmmnd);
-    }
-}
+		curr = to_lowercase(curr);
+	}
+	if (cmmnd == QUIT){
+		return 0;
+	} else {
+		read_command(cmmnd);
+	}
+};
 
 /* Name: to_lowercase
  * Purpose: Ensures user's input is all lowercased
@@ -66,18 +70,17 @@ char to_lowercase(char curr){
  * Paramater: string
  */
 void read_command(string cmmnd){
-	string user_name = "";
 	if (cmmnd == QUIT){
 		return;
 	}
 	else if (cmmnd == READ_GUIDE){
-		read_file(cmmnd, user_name);
+		read_file(cmmnd);
 		cout << " Enter a command (rg, play, hs, q) ";
 		cin >> cmmnd;
 		read_command(cmmnd);
 	}
 	else if (cmmnd == HIGH_SCORE){
-		read_file(cmmnd, user_name);
+		read_file(cmmnd);
 		cout << " Enter a command (rg, play, hs, q) ";
 		cin >> cmmnd;
 		read_command(cmmnd);
@@ -92,53 +95,34 @@ void read_command(string cmmnd){
 	}
 }
 
-/* Name: open_guide
+/* Name: read_file
  * Purpose: Opens the file for the user to read
- * Return: 0 if file is not able to be opened, 1 if list is printed, 
- 		   2 if username is in list, 3 if username is not in list
+ * Return: none
  * Paramater: string(s)
  */
-int read_file(string cmmnd, string user_name){
+void read_file(string cmmnd){
 //Read the neccessary file
 	ifstream in;
-	int file_length;
-	string file_to_open, line; 
-	user_name = "";
+	string file_to_open, line;
 	if (cmmnd == READ_GUIDE){
-		file_to_open = "hangman.readme";
+		file_to_open = "README";
 	} else if (cmmnd == HIGH_SCORE) {
-		file_to_open = "highscores.dat";
+		file_to_open = "highscores.txt";
 	} else {
 		cout << "command not valid";
 	}
-		in.open(file_to_open);
-		in >> file_length;
-		if (not in.is_open()){
-       		cout << "File can't be opened. ";
-       		return 0;
+	in.open(file_to_open);
+	if (not in.is_open()){
+		cout << "File can't be opened. ";
+		return;
     	}
-    /* NOTE: Seperate into print list and check list funcs
-    */
-    	//Sequence to follow if printing list
-    	if (user_name == ""){
-			for(int i=0; i < file_length; i++){
-				getline(in, line);
-				cout << line << endl;
-			}
-			cout << "" << endl;
-			in.close();
-			return 1;
-		//Sequence to follow if checking list for username	
-		} else {
-			for(int i=0; i < file_length; i++){
-				getline(in, line);
-				if (line == user_name){
-					return 2;
-				}
-			}
-			return 3;
-			in.close();
-		}
+	while(!in.eof()){
+		getline(in, line);
+		cout << line << endl;
+	}
+	cout << "" << endl;
+	in.close();
+	return;
 }
 /* Name: play_game
  * Purpose: Runs through the sequence neccessary to play the game
@@ -147,23 +131,75 @@ int read_file(string cmmnd, string user_name){
  */
 void play_game(){
 	//Check and see if user has trophies
+	User_info curr_user;
 	string user_name;
-	int name_in_list;
 	cout << "Enter your name " << endl;
 	cin >> user_name;
-	name_in_list = read_file(HIGH_SCORE, user_name);
-	if ((name_in_list == 0) or (name_in_list == 1)){
-		return;
-	} else if (name_in_list == 2) {
-		check_username(user_name)
+	if (user_name == ""){
+		cout << "You didn't enter a name silly! I'm gonna leave now..."
+		<< " Goodbye :-)" << endl;
 	}
+	curr_user = *check_username(user_name);
+	// if (curr_user == nullptr)
 }
 /* Name: check_username
  * Purpose: Get's user's information
  * Return: Struct with user's information
  * Paramater: 
  */
-struct check_username(string user_name){
-	stringstream ss()
-	WORKING ON THIS!!
+struct User_info *check_username(string user_name){
+	User_info *curr_user = new User_info; 
+	ifstream in;
+	string line, info;
+	in.open("highscores.txt");
+	if (not in.is_open()){
+		cout << "File can't be opened. ";
+	}
+	// Check the username list to find if the user already exists
+	while (!in.eof()){
+		getline(in, line);
+		stringstream ss(line);
+		ss >> info;
+		if(user_name == info){
+			curr_user->name = info;
+			ss >> curr_user->game_score;
+			ss >> curr_user->trophies;
+			//Test to make sure struct is right
+			cout << curr_user->name << endl;
+			cout << curr_user->game_score << endl;
+			cout << curr_user->trophies << endl;
+			// high score list is still open
+			User_info *temp = curr_user;
+			delete curr_user;
+			return temp;
+		}
+	}
+	delete curr_user;
+	curr_user = nullptr;
+	return curr_user;
 }
+/* Name: check_char_available
+ * Purpose: Get the name of the characters that the user can choose from
+ * Return: string array with names of characters
+ * Paramater: 
+ */
+// string check_char_available(int trophies){
+// 	string chars_avail[];
+// 	if (trophies = 0){
+
+// 	} else if (trophies == 1){
+
+// 	} else if (trophies == 2){
+
+// 	} else if (trophies == 3){
+
+// 	} else if (trophies == 4){
+
+// 	} else if (trophies == 5 ){
+
+// 	} else {
+// 		cout << "invalid number of trophies";
+// 	}
+// }
+
+
